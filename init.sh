@@ -6,6 +6,7 @@ if [ -z $ALERT_CONFIG ]; then
 fi
 
 # Get config file
+mkdir -p /srv/alerting/etc
 curl -s $ALERT_CONFIG > /srv/alerting/etc/config.json
 
 # Run 
