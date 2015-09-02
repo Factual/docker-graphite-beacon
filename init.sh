@@ -8,6 +8,8 @@ fi
 # Get config file
 mkdir -p /srv/alerting/etc
 curl -s $ALERT_CONFIG > /srv/alerting/etc/config.json
+echo "Received alert config:"
+cat /srv/alerting/etc/config.json
 
 # Run 
 /usr/bin/supervisord
